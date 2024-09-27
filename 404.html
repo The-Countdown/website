@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script>
+        window.onload = () => {
+            const currentURL = window.location.href;
+            const lowerCaseURL = currentURL.toLowerCase();
+            if (currentURL !== lowerCaseURL) {
+                location.replace(lowerCaseURL);
+            } else {
+                document.getElementById('content').style.display = 'block';
+                document.title = '404 - Not Found';
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <div id="content" style="display: none;">
+        <header class="full-width-header">
+            <div class="header-text">404 Page Not Found</div>
+            <img class="header-image" src="../assets/background.png" alt="Banner Image">
+        </header>
+        <main>
+            <div class="flex-container">
+                <div class="button-container">
+                    <div class="center-text-block">
+                        <h2>Oops! The page you're looking for doesn't exist.</h2>
+                        <p>It seems that the page you're looking for doesn't exist.</p>
+                        <button onclick="location.href='..'" class="modal-button">Go Home</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
